@@ -1,0 +1,69 @@
+body {
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  width: 150px;
+  height: 220px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.left, .middle, .right {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.left {
+  align-self: flex-start;
+}
+
+.middle {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  align-self: flex-end;
+}
+
+/* Optional: Adding content to the divs to make the cards visible and interesting */
+.card:nth-child(1) .left::after { content: "A"; }
+.card:nth-child(1) .middle::after { content: "♠"; font-size: 3em; color: #555; }
+.card:nth-child(1) .right::after { content: "A"; }
+
+.card:nth-child(2) .left::after { content: "K"; }
+.card:nth-child(2) .middle::after { content: "♥"; font-size: 3em; color: #e74c3c; }
+.card:nth-child(2) .right::after { content: "K"; }
+
+.card:nth-child(3) .left::after { content: "Q"; }
+.card:nth-child(3) .middle::after { content: "♦"; font-size: 3em; color: #e74c3c; }
+.card:nth-child(3) .right::after { content: "Q"; }
